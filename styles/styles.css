@@ -1,0 +1,365 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../fonts/Ubuntu-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(../fonts/Ubuntu-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --color-white: #fff;
+  --color-base: #787a80;
+  --color-accent: #ff5a30;
+  --color-black: #1e212c;
+  --color-grey: #424551;
+  --color-border: #D7DADD;
+  --font-family-base: "Ubuntu", regular;
+  --border: 1px solid var(--color-border);
+  --container-width: 1230px;
+  --container-padding-x: 32px;
+  --container-padding-y: 120px;
+  --input-height: 44px;
+  --button-height-to-form: 44px,
+  --button-height: 52px;
+  --transition-duration: 0.2s;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  -webkit-clip-path: inset(100%) !important;
+          clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 767px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.28;
+  color: var(--color-white);
+}
+
+a,
+button,
+textarea,
+input,
+svg * {
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header {
+  padding-top: 36px;
+}
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0px 0px;
+  color: var(--color-grey);
+}
+.header__menu {
+  padding-left: 60px;
+  margin-right: auto;
+}
+.header__menu-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0px 40px;
+}
+.header__menu-link {
+  position: relative;
+  height: 48px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+}
+@media (hover: hover) {
+  .header__menu-link:hover::after {
+    width: 100%;
+  }
+}
+@media (hover: none) {
+  .header__menu-link:active::after {
+    width: 100%;
+  }
+}
+.header__menu-link::after {
+  content: "";
+  position: absolute;
+  top: 87%;
+  left: 50%;
+  translate: -50%;
+  height: 2px;
+  width: 0;
+  background-color: black;
+  -webkit-transition-duration: inherit;
+          transition-duration: inherit;
+}
+.header__actions-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0px 88px;
+}
+.header__actions-menu-item {
+  position: relative;
+}
+@media (hover: hover) {
+  .header__actions-menu-item:hover ::before {
+    scale: 1.3;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+}
+@media (hover: none) {
+  .header__actions-menu-item:active ::before {
+    scale: 1.3;
+    -webkit-transition-duration: var(--transition-duration);
+            transition-duration: var(--transition-duration);
+  }
+}
+.header__actions-menu-item .actions-menu__phone::before {
+  content: "";
+  background: url(/images/icones/phone-icone.svg) center no-repeat;
+  width: 40px;
+  aspect-ratio: 1;
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  left: -40px;
+}
+.header__actions-menu-item .actions-menu__email::before {
+  content: "";
+  background: url(/images/icones/chat-icone.svg) center no-repeat;
+  width: 40px;
+  aspect-ratio: 1;
+  display: inline-block;
+  position: absolute;
+  top: 4px;
+  left: -48px;
+}
+.header__actions-menu-title {
+  font-weight: 700;
+  display: block;
+}
+.header__actions-menu-link {
+  color: var(--color-black);
+  font-size: 18px;
+  position: relative;
+}
+@media (hover: hover) {
+  .header__actions-menu-link:hover::after {
+    width: 100%;
+  }
+}
+@media (hover: none) {
+  .header__actions-menu-link:active::after {
+    width: 100%;
+  }
+}
+.header__actions-menu-link::after {
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  translate: -50%;
+  height: 2px;
+  width: 0;
+  background-color: black;
+  -webkit-transition-duration: inherit;
+          transition-duration: inherit;
+}

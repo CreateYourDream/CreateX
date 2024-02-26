@@ -1,0 +1,22 @@
+:root {
+  --color-white: #fff;
+  --color-base: #787a80; //700
+  --color-accent: #ff5a30;
+  --color-black: #1e212c; //900
+  --color-grey: #424551; //800
+  --color-border: #D7DADD; //400
+
+  --font-family-base: "Ubuntu", regular;
+
+  --border: 1px solid var(--color-border);
+
+  --container-width: 1230px;
+  --container-padding-x: 32px;
+  --container-padding-y: 120px;
+
+  --input-height: 44px;
+  --button-height-to-form: 44px,
+  --button-height: 52px;
+
+  --transition-duration: 0.2s;
+}
