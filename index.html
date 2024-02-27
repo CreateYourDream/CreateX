@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CreateX</title>
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./styles/blocks/app.js" async></script>
   </head>
   <body>
     <header class="header">
@@ -36,6 +37,9 @@
               <a href="" class="header__menu-link">Contacts</a>
             </li>
           </ul>
+          <button class="burger-button-menu burger-button" id="burgerButton">
+            <span class="visually-hidden">Open navigation menu</span>
+          </button>
         </nav>
         <ul class="header__actions-menu">
           <li class="header__actions-menu-item">
@@ -57,5 +61,31 @@
         </ul>
       </div>
     </header>
+    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
+      <form class="mobile-overlay__close-button-wrapper">
+        <button class="mobile-overlay__close-button cross-button" type="submit">
+          <span class="visually-hidden">Close navigation menu</span>
+        </button>
+      </form>
+      <div class="mobile-overlay-body">
+        <ul class="mobile-overlay__list">
+          <li class="mobile-overlay__item">
+            <a href="#" class="mobile-overlay__link">About Us</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a href="#" class="mobile-overlay__link">Services</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a href="#" class="mobile-overlay__link">Work</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a href="#" class="mobile-overlay__link">News</a>
+          </li>
+          <li class="mobile-overlay__item">
+            <a href="#" class="mobile-overlay__link">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </dialog>
   </body>
 </html>

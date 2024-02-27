@@ -1,6 +1,5 @@
 .header {
   padding-top: 36px;
-
   &__inner {
     @include display-gap();
     color: var(--color-grey);
@@ -8,8 +7,22 @@
   &__menu {
     padding-left: 60px;
     margin-right: auto;
+    
+    @include desktop {
+      padding-left: 40px;
+    }
+
     &-list {
-      @include display-gap(0, 40);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 40px;
+      @include desktop {
+        column-gap: 20px;
+      }
+      @include tablet {
+        display: none;
+      }
     }
     &-link {
       position: relative;
@@ -28,7 +41,14 @@
     }
   }
   &__actions-menu {
-    @include display-gap(0, 88);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 88px;
+    @include desktop {
+      column-gap: 68px;
+    }
+
     &-item {
       position: relative;
       @include hover {
