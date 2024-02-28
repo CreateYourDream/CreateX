@@ -32,14 +32,8 @@
   width: $size;
   aspect-ratio: 1;
 }
-@mixin display-gap($r-gap: 0, $c-gap: 0) {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: #{$r-gap}px #{$c-gap}px;
-}
 
-@mixin underline ($top){
+@mixin underline($top) {
   content: "";
   position: absolute;
   top: $top;
@@ -48,5 +42,5 @@
   height: 2px;
   width: 0;
   background-color: black;
-  transition-duration: inherit;
+  transition-duration: var(--transition-duration);
 }

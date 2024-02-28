@@ -1,15 +1,33 @@
 .header {
   padding-top: 36px;
   &__inner {
-    @include display-gap();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: var(--color-grey);
+    @include tablet {
+      flex-wrap: wrap;
+      row-gap: 20px;
+    }
+  }
+  &__logo {
+    position: relative;
+
+    @include hover {
+      scale: 1.2;
+    }
+
   }
   &__menu {
-    padding-left: 60px;
+    margin-left: 60px;
     margin-right: auto;
-    
+
     @include desktop {
-      padding-left: 40px;
+      margin-left: 40px;
+    }
+    @include mobile {
+      margin-left: auto;
+      margin-right: 0;
     }
 
     &-list {
@@ -20,7 +38,7 @@
       @include desktop {
         column-gap: 20px;
       }
-      @include tablet {
+      @include mobile {
         display: none;
       }
     }
@@ -45,10 +63,21 @@
     justify-content: space-between;
     align-items: center;
     column-gap: 88px;
+    flex-wrap: wrap;
+
     @include desktop {
       column-gap: 68px;
+      padding-left: auto;
     }
-
+    @include tablet {
+      padding-left: 40px;
+      justify-content: start;
+      flex-basis: 100%;
+      row-gap: 10px;
+    }
+    @include mobile-little {
+      padding-left: 50px;
+    }
     &-item {
       position: relative;
       @include hover {
@@ -67,6 +96,11 @@
           top: 4px;
           left: -40px;
         }
+        @include mobile-little {
+          &::before {
+            left: -50px;
+          }
+        }
       }
       .actions-menu__email {
         &::before {
@@ -80,6 +114,7 @@
         }
       }
     }
+
     &-title {
       font-weight: 700;
       display: block;
