@@ -64,6 +64,81 @@
         </ul>
       </div>
     </header>
+    <main class="content">
+      <section class="construction">
+        <div class="construction__body container">
+          <h1 class="construction__body-title">CreateX construction</h1>
+          <div class="construction__body-discription">
+            <p>
+              Cras ultrices leo vitae non viverra. Fringilla nisi quisque
+              consequat, dignissim vitae proin ipsum sed. Pellentesque nec
+              turpis purus eget pellentesque integer ipsum elementum felis.
+            </p>
+          </div>
+          <div class="construction__body-actions">
+            <a href="" class="construction__body-actions-link"
+              >learn more about us</a
+            >
+            <button
+              class="construction__body-actions-button button"
+              id="submitRequest"
+            >
+              submit request
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <dialog class="request-overlay" id="requestOverlay">
+      <form action="#" class="request-overlay__form">
+        <h2 class="request-overlay__form-title"></h2>
+        <ul class="request-overlay__form-list">
+          <li class="request-overlay__form-item">
+            <label for="name" class="request-overlay__form-title"> </label>
+            <input
+              class="request-overlay__form-input"
+              type="text"
+              name="name"
+            />
+          </li>
+          <li class="request-overlay__form-item">
+            <label class="request-overlay__form-title" for="phone"> </label>
+            <input
+              class="request-overlay__form-input"
+              type="text"
+              name="phone"
+            />
+          </li>
+          <li class="request-overlay__form-item">
+            <label class="request-overlay__form-title" for="email"> </label>
+            <input
+              class="request-overlay__form-input"
+              type="text"
+              name="email"
+            />
+          </li>
+          <li class="request-overlay__form-item">
+            <label class="request-overlay__form-title" for="massage"> </label>
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              class="request-overlay__form-textarea"
+            ></textarea>
+          </li>
+        </ul>
+        <div class="request-overlay__form-checkbox">
+          <label class="request-overlay__form-checkbox-label" for=""
+            ><input
+              type="checkbox"
+              class="request-overlay__form-checkbox-input"
+              type="text"
+          /></label>
+        </div>
+        <button class="request-overlay__form-button"></button>
+      </form>
+    </dialog>
     <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
       <form class="mobile-overlay__close-button-wrapper">
         <button class="mobile-overlay__close-button cross-button" type="submit">
