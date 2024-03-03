@@ -1,0 +1,38 @@
+.construction {
+  background: url(/images/icones/bg-cran-image.jpg) center no-repeat;
+  background-size: cover;
+  padding-bottom: 120px;
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    &-title {
+      margin-block: 220px 24px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 93px;
+    }
+    &-discription {
+      font-size: 20px;
+      max-width: 595px;
+      margin-bottom: 71px;
+      line-height: 30px;
+    }
+    &-actions {
+      &-link {
+        @include reset-link;
+        box-sizing: border-box;
+        margin-right: 24px;
+        @include flex-center(true);
+        width: 278px;
+        border: 1px solid var(--color-white);
+        height: var(--button-height);
+        border-radius: var(--border-radius-small);
+        @include hover {
+          background-color: var(--color-accent);
+        }
+      }
+    }
+  }
+}
