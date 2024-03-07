@@ -74,7 +74,9 @@
             </h1>
             <div class="construction__body-discription">
               <p>
-                Cras ultrices leo vitae non viverra. Fringilla nisi quisque consequat, dignissim vitae proin ipsum sed. Pellentesque nec turpis purus eget pellentesque integer ipsum elementum felis. 
+                Cras ultrices leo vitae non viverra. Fringilla nisi quisque
+                consequat, dignissim vitae proin ipsum sed. Pellentesque nec
+                turpis purus eget pellentesque integer ipsum elementum felis.
               </p>
             </div>
             <div class="construction__body-actions">
@@ -93,9 +95,16 @@
       </section>
     </main>
     <dialog class="request-overlay" id="requestOverlay">
-      <form action="#" class="request-overlay__form">
-        <h2 class="request-overlay__form-title"></h2>
+      <form action="" class="request-overlay__form">
+        <h2 class="request-overlay__form-title">
+          A quick way to discuss details
+        </h2>
         <ul class="request-overlay__form-list">
+          <li class="request-overlay__close-button-wrapper">
+            <button class="request-overlay__close-button" type="submit">
+              <span class="visually-hidden">Close submit request form</span>
+            </button>
+          </li>
           <li class="request-overlay__form-item">
             <label for="name" class="request-overlay__form-title"> </label>
             <input
@@ -142,13 +151,19 @@
         <button class="request-overlay__form-button"></button>
       </form>
     </dialog>
-    <dialog class="mobile-overlay visible-mobile" id="mobileOverlay">
-      <form class="mobile-overlay__close-button-wrapper">
-        <button class="mobile-overlay__close-button cross-button" type="submit">
-          <span class="visually-hidden">Close navigation menu</span>
-        </button>
-      </form>
+
+    <div
+      class="mobile-overlay visible-mobile"
+      id="mobileOverlay"
+    >
       <div class="mobile-overlay-body">
+        <div class="mobile-overlay__close-button-wrapper">
+          <button
+            class="mobile-overlay__close-button cross-button"
+          >
+            <span class="visually-hidden">Close navigation menu</span>
+          </button>
+        </div>
         <ul class="mobile-overlay__list">
           <li class="mobile-overlay__item">
             <a href="#" class="mobile-overlay__link">About Us</a>
@@ -167,6 +182,6 @@
           </li>
         </ul>
       </div>
-    </dialog>
+    </div>
   </body>
 </html>

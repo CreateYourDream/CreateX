@@ -134,6 +134,13 @@ table {
   border-spacing: 0;
 }
 
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
 @font-face {
   font-family: "Ubuntu";
   src: url(../fonts/Ubuntu-Regular.woff2) format("woff2");
@@ -520,40 +527,85 @@ a {
 }
 
 .mobile-overlay {
-  width: 100%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition-duration: var(--transition-duration);
+          transition-duration: var(--transition-duration);
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
   height: 100%;
-  margin: 0;
-  border: none;
-  padding: 39px 3px;
-}
-.mobile-overlay--body {
-  max-width: 100%;
-  max-height: 100%;
-}
-.mobile-overlay__close-button-wrapper {
+  width: 100%;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--color-black);
+}
+.mobile-overlay.mobile-overlay-open {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+.mobile-overlay-body {
+  min-height: 100%;
+  width: 50%;
+  background-color: var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  border: 2px solid var(--color-black);
+}
+@media (max-width: 470px) {
+  .mobile-overlay-body {
+    width: 100%;
+  }
+}
+.mobile-overlay__close-button-wrapper {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+@media (hover: hover) {
+  .mobile-overlay__close-button-wrapper:hover {
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius);
+  }
+}
+@media (hover: none) {
+  .mobile-overlay__close-button-wrapper:active {
+    background-color: var(--color-accent);
+    border-radius: var(--border-radius);
+  }
 }
 .mobile-overlay__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   row-gap: 40px;
-  min-height: 80vh;
 }
 
 .cross-button {
@@ -614,9 +666,10 @@ a {
 .construction__body-title {
   margin-block: 220px 24px;
   text-transform: uppercase;
+  font-size: clamp(30px, 5vw, 72px);
   font-weight: 700;
-  font-size: 72px;
   line-height: 93px;
+  line-height: clamp(34px, 6.4583333333vw, 93px);
 }
 .construction__body-discription {
   font-size: 20px;
@@ -624,11 +677,21 @@ a {
   margin-bottom: 71px;
   line-height: 30px;
 }
+.construction__body-actions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 24px;
+     -moz-column-gap: 24px;
+          column-gap: 24px;
+}
 .construction__body-actions-link {
-  color: inherit;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-right: 24px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -638,13 +701,10 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 278px;
-  border: 1px solid var(--color-white);
   height: var(--button-height);
+  padding: 0 40px;
+  border: 1px solid var(--color-white);
   border-radius: var(--border-radius-small);
-}
-.construction__body-actions-link, .construction__body-actions-link:hover {
-  text-decoration: none;
 }
 @media (hover: hover) {
   .construction__body-actions-link:hover {
