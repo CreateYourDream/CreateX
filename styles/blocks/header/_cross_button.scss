@@ -4,6 +4,7 @@
   position: relative;
   border-radius: var(--border-radius);
   @include hover {
+    transition-duration: var(--transition-duration);
     background-color: var(--color-accent);
   }
   &::before,

@@ -1,0 +1,107 @@
+.request-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  padding: 16px;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  @include flex-center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.6s;
+  cursor: pointer;
+  overflow-y: auto;
+  transform: perspective(600px) translateY(-100%) rotateX(50deg);
+  &.request-overlay-open {
+    visibility: visible;
+    opacity: 1;
+    transform: perspective(600px) translateY(0%) rotateX(0deg);
+  }
+  &__body {
+    position: relative;
+    background-color: var(--color-white);
+    width: 500px;
+    height: 670px;
+    @include flex-center;
+    align-items: start;
+    @include mobile-little {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__form {
+    cursor: auto;
+    padding: 48px 40px;
+    @include flex-center;
+    flex-direction: column;
+    color: var(--color-black);
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      padding-block: 24px;
+    }
+    &-item {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &-title {
+      font-weight: 700;
+      @include fluid-text(28, 20);
+    }
+    &-label {
+      flex-basis: 100%;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    &-label::placeholder {
+      color: var(--color-ligth-grey);
+    }
+    &-input {
+      width: 100%;
+      height: 44px;
+      border: 1px solid var(--color-border);
+    }
+    &-textarea {
+      font-size: 14px;
+      width: 100%;
+      height: 66px;
+      border: 1px solid var(--color-border);
+      resize: none;
+    }
+    &-checkbox {
+      cursor: pointer;
+      font-size: 14px;
+      position: relative;
+      display: flex;
+      &-input {
+        appearance: none;
+        margin: 0;
+      }
+      &-customize {
+        @include square(14px);
+        border: 2px solid var(--color-accent);
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include flex-center;
+      }
+      &-input:checked + &-customize {
+        content: "";
+        display: block;
+        background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='0.5' width='15' height='15' rx='2.5' fill='%23FF5A30' stroke='%23FF5A30'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.8277 4.19526C13.0574 4.45561 13.0574 4.87772 12.8277 5.13807L6.94536 11.8047C6.71564 12.0651 6.34319 12.0651 6.11347 11.8047L3.17229 8.4714C2.94257 8.21105 2.94257 7.78894 3.17229 7.5286C3.40201 7.26825 3.77446 7.26825 4.00418 7.5286L6.52941 10.3905L11.9958 4.19526C12.2255 3.93491 12.598 3.93491 12.8277 4.19526Z' fill='white'/%3E%3C/svg%3E%0A")
+          no-repeat center;
+      }
+      &-title {
+        display: block;
+        margin-left: 28px;
+      }
+    }
+    &-button {
+      width: 174px;
+      cursor: pointer;
+    }
+  }
+}

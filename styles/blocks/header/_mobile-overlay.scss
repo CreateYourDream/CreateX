@@ -1,19 +1,20 @@
 .mobile-overlay {
-  transform: translateY(-100%);
-  transition-duration: var(--transition-duration);
-  background-color: rgba(0, 0, 0, 0.7);
-  position: fixed;
   height: 100%;
   width: 100%;
-  top: 0;
+  position: fixed;
+  padding: 16px;
+  inset: 0;
+  color: var(--color-black);
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--color-black);
+  transform: perspective(600px) translateY(-100%) rotateX(50deg);
+  transition: var(--transition-duration);
   &.mobile-overlay-open {
-    transform: translateY(0%);
+    transform: perspective(600px) translateY(0%) rotateX(0deg);
   }
-  &-body {
+  &__body {
     min-height: 100%;
     width: 50%;
     background-color: var(--color-white);
@@ -40,17 +41,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 40px;
+    row-gap: 20px;
+  }
+  &__item {
+    position: relative;
+    padding-block: 20px;
+    @include hover {
+      &::before {
+        width: 100%;
+      }
+    }
+    &::before {
+      @include underline(80%);
+    }
   }
 }
-//   &__close-button-wrapper {
-//     display: flex;
-//     justify-content: end;
-//   }
-//   &__list {
-//     @include flex-center;
-//     flex-direction: column;
-//     row-gap: 40px;
-//     min-height: 80vh;
-//   }
-// }

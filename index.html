@@ -94,73 +94,10 @@
         </div>
       </section>
     </main>
-    <dialog class="request-overlay" id="requestOverlay">
-      <form action="" class="request-overlay__form">
-        <h2 class="request-overlay__form-title">
-          A quick way to discuss details
-        </h2>
-        <ul class="request-overlay__form-list">
-          <li class="request-overlay__close-button-wrapper">
-            <button class="request-overlay__close-button" type="submit">
-              <span class="visually-hidden">Close submit request form</span>
-            </button>
-          </li>
-          <li class="request-overlay__form-item">
-            <label for="name" class="request-overlay__form-title"> </label>
-            <input
-              class="request-overlay__form-input"
-              type="text"
-              name="name"
-            />
-          </li>
-          <li class="request-overlay__form-item">
-            <label class="request-overlay__form-title" for="phone"> </label>
-            <input
-              class="request-overlay__form-input"
-              type="text"
-              name="phone"
-            />
-          </li>
-          <li class="request-overlay__form-item">
-            <label class="request-overlay__form-title" for="email"> </label>
-            <input
-              class="request-overlay__form-input"
-              type="text"
-              name="email"
-            />
-          </li>
-          <li class="request-overlay__form-item">
-            <label class="request-overlay__form-title" for="massage"> </label>
-            <textarea
-              name=""
-              id=""
-              cols="30"
-              rows="10"
-              class="request-overlay__form-textarea"
-            ></textarea>
-          </li>
-        </ul>
-        <div class="request-overlay__form-checkbox">
-          <label class="request-overlay__form-checkbox-label" for=""
-            ><input
-              type="checkbox"
-              class="request-overlay__form-checkbox-input"
-              type="text"
-          /></label>
-        </div>
-        <button class="request-overlay__form-button"></button>
-      </form>
-    </dialog>
-
-    <div
-      class="mobile-overlay visible-mobile"
-      id="mobileOverlay"
-    >
-      <div class="mobile-overlay-body">
+    <div class="mobile-overlay visible-mobile" id="mobileOverlay">
+      <div class="mobile-overlay__body">
         <div class="mobile-overlay__close-button-wrapper">
-          <button
-            class="mobile-overlay__close-button cross-button"
-          >
+          <button class="mobile-overlay__close-button cross-button">
             <span class="visually-hidden">Close navigation menu</span>
           </button>
         </div>
@@ -181,6 +118,81 @@
             <a href="#" class="mobile-overlay__link">Contacts</a>
           </li>
         </ul>
+      </div>
+    </div>
+
+    <div class="request-overlay" id="requestOverlay">
+      <div class="request-overlay__body">
+        <form action="" class="request-overlay__form">
+          <h2 class="request-overlay__form-title">
+            A quick way to discuss details
+          </h2>
+          <ul class="request-overlay__form-list">
+            <li class="request-overlay__form-item">
+              <label for="name" class="request-overlay__form-label"
+                >Name*</label
+              >
+              <input
+                class="request-overlay__form-input"
+                placeholder="Your name"
+                type="text"
+                required
+              />
+            </li>
+            <li class="request-overlay__form-item">
+              <label class="request-overlay__form-label" for="phone"
+                >Phone*</label
+              >
+              <input
+                class="request-overlay__form-input"
+                placeholder="Your phone number"
+                type="number"
+                name="phone"
+                required
+              />
+            </li>
+            <li class="request-overlay__form-item">
+              <label class="request-overlay__form-label" for="email"
+                >Email</label
+              >
+              <input
+                class="request-overlay__form-input"
+                placeholder="Your working email"
+                type="email"
+                name="email"
+              />
+            </li>
+            <li class="request-overlay__form-item">
+              <label class="request-overlay__form-label" for="massage"
+                >Message*</label
+              >
+              <textarea
+              class="request-overlay__form-textarea"
+              placeholder="Your message"
+                cols="30"
+                rows="10"
+                
+                required
+              ></textarea>
+            </li>
+            <li class="request-overlay__form-item">
+              <label class="request-overlay__form-checkbox">
+                <input
+                  type="checkbox"
+                  class="request-overlay__form-checkbox-input"
+                />
+                <span class="request-overlay__form-checkbox-customize"></span>
+                <span class="request-overlay__form-checkbox-title">
+                  I agree to receive communications from Createx Construction
+                  Bureau.
+                </span>
+              </label>
+            </li>
+          </ul>
+          <button class="request-overlay__form-button button" type="submit">
+            send request
+          </button>
+        </form>
       </div>
     </div>
   </body>
