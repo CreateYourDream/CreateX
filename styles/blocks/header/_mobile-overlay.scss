@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
   transform: perspective(600px) translateY(-100%) rotateX(50deg);
-  transition: var(--transition-duration);
+  transition: var(--transition-duration-form);
   &.mobile-overlay-open {
     transform: perspective(600px) translateY(0%) rotateX(0deg);
   }

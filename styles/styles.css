@@ -171,7 +171,8 @@ table {
   --button-width: 224px;
   --border-radius: 12px;
   --border-radius-small: 4px;
-  --transition-duration: 0.6s;
+  --transition-duration: 0.2s;
+  --transition-duration-form: 0.6s ;
 }
 
 .container {
@@ -497,7 +498,7 @@ a {
   flex-direction: column;
   align-items: center;
   transform: perspective(600px) translateY(-100%) rotateX(50deg);
-  transition: var(--transition-duration);
+  transition: var(--transition-duration-form);
 }
 .mobile-overlay.mobile-overlay-open {
   transform: perspective(600px) translateY(0%) rotateX(0deg);
@@ -619,7 +620,7 @@ a {
   align-items: center;
   visibility: hidden;
   opacity: 0;
-  transition: 0.6s;
+  transition: var(--transition-duration-form);
   cursor: pointer;
   overflow-y: auto;
   transform: perspective(600px) translateY(-100%) rotateX(50deg);
@@ -742,13 +743,23 @@ a {
 .construction__body-title {
   margin-block: 220px 24px;
   text-transform: uppercase;
-  font-size: clamp(30px, 5vw, 72px);
+  font-size: clamp(36px, 5vw, 72px);
   font-weight: 700;
   line-height: 93px;
   line-height: clamp(34px, 6.4583333333vw, 93px);
 }
+@media (max-width: 1024px) {
+  .construction__body-title {
+    margin-block: 160px 24px;
+  }
+}
+@media (max-width: 767px) {
+  .construction__body-title {
+    margin-block: 100px 24px;
+  }
+}
 .construction__body-discription {
-  font-size: 20px;
+  font-size: clamp(16px, 1.3888888889vw, 20px);
   max-width: 595px;
   margin-bottom: 71px;
   line-height: 30px;
@@ -760,14 +771,30 @@ a {
   -moz-column-gap: 24px;
        column-gap: 24px;
 }
+@media (max-width: 470px) {
+  .construction__body-actions {
+    flex-wrap: wrap;
+    row-gap: 15px;
+  }
+}
 .construction__body-actions-link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
   height: var(--button-height);
-  padding: 0 40px;
+  padding-inline: 40px;
   border: 1px solid var(--color-white);
   border-radius: var(--border-radius-small);
+}
+@media (max-width: 767px) {
+  .construction__body-actions-link {
+    padding-inline: 20px;
+  }
+}
+@media (max-width: 470px) {
+  .construction__body-actions-link {
+    width: 100%;
+  }
 }
 @media (hover: hover) {
   .construction__body-actions-link:hover {
@@ -777,5 +804,15 @@ a {
 @media (hover: none) {
   .construction__body-actions-link:active {
     background-color: var(--color-accent);
+  }
+}
+@media (max-width: 767px) {
+  .construction__body-actions-button {
+    width: 180px;
+  }
+}
+@media (max-width: 470px) {
+  .construction__body-actions-button {
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */

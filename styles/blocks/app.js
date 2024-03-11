@@ -11,7 +11,7 @@ burgerButton.addEventListener("click", () => {
 
 function closeModal(event) {
   const target = event.target;
-  target === mobileOverlayCloseButton || mobileOverlay
+  target === mobileOverlayCloseButton && mobileOverlay
     ? mobileOverlay.classList.remove("mobile-overlay-open")
     : "";
 }
@@ -28,8 +28,7 @@ requestOverlayOpenButton.addEventListener("click", () => {
 });
 
 function closeRequestOverlay(event) {
-  const target = event.target;
-  target === requestOverlay
+  event.target === requestOverlay
     ? requestOverlay.classList.remove("request-overlay-open")
     : "";
 }
