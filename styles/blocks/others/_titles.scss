@@ -1,0 +1,9 @@
+.title{
+    color: var(--color-black);
+    font-weight: 700;
+  }
+  .sub-title{
+    color: var(--color-base);
+    @include fluid-text(18, 14);
+    padding-block: 24px 60px;
+  }
