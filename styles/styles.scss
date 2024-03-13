@@ -1,13 +1,16 @@
 @import "normolize", "fonts", "mixins", "media", "variabels", "utils", "globals";
 
 @import 'blocks/others/button',
-        'blocks/others/titles'; 
+        'blocks/others/titles',
+        'blocks/others/inputs'; 
 
 @import 'blocks/header/burger-button',
         "blocks/header/header", 
         'blocks/header/cross_button',
         'blocks/construction/construction',
         'blocks/about-us/about-us',
+        'blocks/our-values/our-values',
+        'blocks/ask-questions/ask-questions',
         'blocks/header/mobile-overlay', 
         'blocks/construction/request-overlay';
 

@@ -65,7 +65,10 @@
       </div>
     </header>
     <main class="content">
-      <section class="construction">
+      <section
+        class="construction"
+        style="background: url(./images/icones/bg-cran-image.jpg)"
+      >
         <div class="container">
           <div class="construction__body">
             <h1 class="construction__body-title">
@@ -115,7 +118,110 @@
         </div>
       </section>
       <section class="our-values">
-        
+        <div class="our-values-wrapper container">
+          <div class="our-values-header">
+            <h2 class="our-values-header__title title">Our core values</h2>
+            <div class="our-values-header__info sub-title">
+              <p>
+                Our mission is to set the highest standards for construction
+                sphere.
+              </p>
+            </div>
+          </div>
+          <div class="our-values-body">
+            <ul class="our-values-body__list">
+              <li class="our-values-body__item">
+                <img
+                  src="./images/icones/like-icone.svg"
+                  alt="like"
+                  class="our-values-body__item-img"
+                  loading="lazy"
+                />
+                <h3 class="our-values-body__item-subtitle title">Quality</h3>
+                <div class="our-values-body__item-text text">
+                  <p>
+                    Culpa nostrud commodo ea consequat aliquip reprehenderit.
+                    Veniam velit nostrud aliquip sunt.
+                  </p>
+                </div>
+              </li>
+              <li class="our-values-body__item">
+                <img
+                  src="./images/icones/hand-icone.svg"
+                  alt="hand"
+                  class="our-values-body__item-img"
+                  loading="lazy"
+                />
+                <h3 class="our-values-body__item-subtitle title">Safety</h3>
+                <div class="our-values-body__item-text text">
+                  <p>
+                    Anim reprehenderit sint voluptate exercitation adipisicing
+                    laborum adipisicing. Minim empor est ea.
+                  </p>
+                </div>
+              </li>
+              <li class="our-values-body__item">
+                <img
+                  src="./images/icones/slippers-icone.svg"
+                  alt="slippers"
+                  class="our-values-body__item-img"
+                  loading="lazy"
+                />
+                <h3 class="our-values-body__item-subtitle title">Comfort</h3>
+                <div class="our-values-body__item-text text">
+                  <p>
+                    Sit veniam aute dolore adipisicing nulla sit culpa. Minim
+                    mollit voluptate ullamco proident ea ad.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="ask-question">
+        <div class="ask-question-wrapper container">
+          <form action="" class="ask-question__form">
+            <h2 class="ask-question-title title">
+              Want to know more? Ask us a question:
+            </h2>
+            <ul class="ask-question__list">
+              <li class="ask-question__item">
+                <label for="ask-name" class="ask-question__label label"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  class="ask-question__input input"
+                  name="ask-name"
+                  placeholder="Your name"
+                />
+              </li>
+              <li class="ask-question__item">
+                <label for="ask-phone" class="ask-question__label label"
+                  >Phone</label
+                ><input
+                  type="number"
+                  class="ask-question__input input"
+                  name="ask-phone"
+                  placeholder="Your phone"
+                />
+              </li>
+              <li class="ask-question__item-textarea">
+                <label for="ask-message" class="ask-question__label label"
+                  >Message</label
+                >
+                <textarea
+                  class="ask-question__textarea textarea"
+                  name="ask-message"
+                >
+Your message
+                </textarea>
+              </li>
+              <button class="ask-question__button button">send</button>
+            </ul>
+          </form>
+        </div>
       </section>
     </main>
     <div class="mobile-overlay visible-mobile" id="mobileOverlay">
@@ -152,22 +258,22 @@
           </h2>
           <ul class="request-overlay__form-list">
             <li class="request-overlay__form-item">
-              <label for="name" class="request-overlay__form-label"
+              <label for="name" class="request-overlay__form-label label"
                 >Name*</label
               >
               <input
-                class="request-overlay__form-input"
+                class="request-overlay__form-input input"
                 placeholder="Your name"
                 type="text"
                 required
               />
             </li>
             <li class="request-overlay__form-item">
-              <label class="request-overlay__form-label" for="phone"
+              <label class="request-overlay__form-label label" for="phone"
                 >Phone*</label
               >
               <input
-                class="request-overlay__form-input"
+                class="request-overlay__form-input input"
                 placeholder="Your phone number"
                 type="number"
                 name="phone"
@@ -175,22 +281,22 @@
               />
             </li>
             <li class="request-overlay__form-item">
-              <label class="request-overlay__form-label" for="email"
+              <label class="request-overlay__form-label label" for="email"
                 >Email</label
               >
               <input
-                class="request-overlay__form-input"
+                class="request-overlay__form-input input"
                 placeholder="Your working email"
                 type="email"
                 name="email"
               />
             </li>
             <li class="request-overlay__form-item">
-              <label class="request-overlay__form-label" for="massage"
+              <label class="request-overlay__form-label label" for="massage"
                 >Message*</label
               >
               <textarea
-                class="request-overlay__form-textarea"
+                class="request-overlay__form-textarea textarea"
                 placeholder="Your message"
                 cols="30"
                 rows="10"

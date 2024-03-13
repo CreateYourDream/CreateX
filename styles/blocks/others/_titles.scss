@@ -7,3 +7,7 @@
     @include fluid-text(18, 14);
     padding-block: 24px 60px;
   }
+  .text{
+    color: var(--color-base);
+    @include fluid-text(16, 14)
+  }

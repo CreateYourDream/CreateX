@@ -2,9 +2,9 @@
   padding-block: 120px 180px;
   @include tablet {
     padding-block: 120px 100px;
-  };
-  @include mobile{
-    padding-block: 120px 100px;
+  }
+  @include mobile {
+    padding-block: 80px 60px;
   }
   &-header {
     text-align: center;
@@ -34,7 +34,7 @@
       @include tablet {
         @include square(10%);
       }
-      @include mobile{
+      @include mobile {
         @include square(16%);
       }
       &::before {

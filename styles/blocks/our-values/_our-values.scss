@@ -1,0 +1,35 @@
+.our-values {
+  &-header {
+    text-align: center;
+    &__title {
+      @include fluid-text(46, 30);
+    }
+  }
+  &-body {
+    &__list {
+      @include flex-center;
+      gap: 188px;
+      @include tablet {
+        gap: 88px;
+      }
+      @include mobile {
+        gap: 40px;
+      }
+      @include mobile-little {
+        flex-wrap: wrap;
+      }
+    }
+    &__item {
+      @include flex-center;
+      flex-direction: column;
+      text-align: center;
+      max-width: 285px;
+      @include mobile-little {
+        flex-basis: 100%;
+      }
+      &-subtitle {
+        padding-block: 24px 8px;
+      }
+    }
+  }
+}

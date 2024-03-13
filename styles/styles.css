@@ -159,7 +159,7 @@ table {
   --color-accent: #ff5a30;
   --color-black: #1e212c;
   --color-grey: #424551;
-  --color-ligth-grey: #9a9ca5;
+  --color-light-grey: #9a9ca5;
   --color-border: #d7dadd;
   --font-family-base: "Ubuntu";
   --border: 1px solid var(--color-border);
@@ -273,6 +273,39 @@ a {
   color: var(--color-base);
   font-size: clamp(14px, 1.25vw, 18px);
   padding-block: 24px 60px;
+}
+
+.text {
+  color: var(--color-base);
+  font-size: clamp(14px, 1.1111111111vw, 16px);
+}
+
+.input {
+  width: 100%;
+  height: 44px;
+  border: 1px solid var(--color-border);
+}
+.input::-moz-placeholder {
+  color: var(--color-light-grey);
+}
+.input::placeholder {
+  color: var(--color-light-grey);
+}
+
+.textarea {
+  font-size: 14px;
+  width: 100%;
+  height: 66px;
+  border: 1px solid var(--color-border);
+  resize: none;
+  color: var(--color-light-grey);
+}
+
+.label {
+  color: var(--color-grey);
+  flex-basis: 100%;
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
 .burger-button-menu {
@@ -538,7 +571,7 @@ a {
 }
 
 .construction {
-  background: url(/images/icones/bg-cran-image.jpg) center no-repeat;
+  background: center/contain no-repeat;
   background-size: cover;
   padding-bottom: 120px;
 }
@@ -634,7 +667,7 @@ a {
 }
 @media (max-width: 767px) {
   .about-us {
-    padding-block: 120px 100px;
+    padding-block: 80px 60px;
   }
 }
 .about-us-header {
@@ -699,6 +732,81 @@ a {
     background-color: rgb(255, 119, 0);
     border: 1px solid var(--color-white);
   }
+}
+
+.our-values-header {
+  text-align: center;
+}
+.our-values-header__title {
+  font-size: clamp(30px, 3.1944444444vw, 46px);
+}
+.our-values-body__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 188px;
+}
+@media (max-width: 1024px) {
+  .our-values-body__list {
+    gap: 88px;
+  }
+}
+@media (max-width: 767px) {
+  .our-values-body__list {
+    gap: 40px;
+  }
+}
+@media (max-width: 470px) {
+  .our-values-body__list {
+    flex-wrap: wrap;
+  }
+}
+.our-values-body__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 285px;
+}
+@media (max-width: 470px) {
+  .our-values-body__item {
+    flex-basis: 100%;
+  }
+}
+.our-values-body__item-subtitle {
+  padding-block: 24px 8px;
+}
+
+.ask-question {
+  padding-block: 120px;
+}
+.ask-question-title {
+  font-size: clamp(20px, 1.9444444444vw, 28px);
+  margin-block: 48px 32px;
+  text-align: center;
+}
+.ask-question__list {
+  display: flex;
+  gap: 24px;
+  align-items: end;
+}
+.ask-question__item {
+  width: 260px;
+}
+.ask-question-item-textarea {
+  width: 414px;
+}
+.ask-question__input {
+  width: 100%;
+}
+.ask-question__textarea {
+  width: 100%;
+  max-height: var(--input-height);
+  line-height: 44px;
+}
+.ask-question__button {
+  max-width: 140px;
 }
 
 .mobile-overlay {
@@ -843,29 +951,6 @@ a {
 .request-overlay__form-title {
   font-weight: 700;
   font-size: clamp(20px, 1.9444444444vw, 28px);
-}
-.request-overlay__form-label {
-  flex-basis: 100%;
-  font-size: 14px;
-  margin-bottom: 8px;
-}
-.request-overlay__form-label::-moz-placeholder {
-  color: var(--color-ligth-grey);
-}
-.request-overlay__form-label::placeholder {
-  color: var(--color-ligth-grey);
-}
-.request-overlay__form-input {
-  width: 100%;
-  height: 44px;
-  border: 1px solid var(--color-border);
-}
-.request-overlay__form-textarea {
-  font-size: 14px;
-  width: 100%;
-  height: 66px;
-  border: 1px solid var(--color-border);
-  resize: none;
 }
 .request-overlay__form-checkbox {
   cursor: pointer;
